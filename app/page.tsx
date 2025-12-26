@@ -76,7 +76,9 @@ export default function LandingPage() {
                   fill: 'url(#buttonGradient)'
                 }
               }}
-            >Servicios</Button>
+            >
+              Servicios
+            </Button>
             <Button variant="outlined"
               startIcon={<StyleIcon />}
               sx={{
@@ -98,7 +100,9 @@ export default function LandingPage() {
                   fill: 'url(#buttonGradient)'
                 }
               }}
-            >Portafolio</Button>
+            >
+              Portafolio
+            </Button>
             <Button variant="outlined"
               startIcon={<CallIcon />}
               sx={{
@@ -120,7 +124,9 @@ export default function LandingPage() {
                   fill: 'url(#buttonGradient)'
                 }
               }}
-            >Contacto</Button>
+            >
+              Contacto
+            </Button>
           </Box>
 
         </Toolbar>
@@ -134,6 +140,7 @@ export default function LandingPage() {
           alignItems: "center",
           background: "linear-gradient(120deg, #7f00ff, #e100ff, #ffb347)",
           color: "white",
+          boxShadow:6
         }}
       >
         <Container>
@@ -175,15 +182,61 @@ export default function LandingPage() {
 
       {/* CLIENTES */}
       <Container sx={{ py: 6 }}>
-        <Typography align="center" variant="body2" color="text.secondary" gutterBottom>
-          Empresas que confían en nosotros
+        <Typography
+          variant="h4"
+          sx={{
+            fontFamily: '"Montserrat", sans-serif',
+            fontWeight: 700,
+            background: "linear-gradient(90deg, #ff8a00, #e52e71)",
+            WebkitBackgroundClip: "text",
+            backgroundClip: "text",
+            color: "transparent",
+            textShadow: "0 2px 4px rgba(0,0,0,0.1)",
+            letterSpacing: "0.05em",
+            padding: "0.2em 0.5em",
+            borderRadius: "4px",
+            textAlign: 'center', // Añadir esta línea
+            width: '100%', // Asegurar que ocupe todo el ancho
+            display: 'block', // Cambiar a block
+            mx: 'auto', // Margen horizontal automático
+            mb: 3, // Margen inferior para separar de las cards
+            '&:hover': {
+              transform: "scale(1.02)",
+              transition: "all 0.3s ease"
+            }
+          }}>
+          Clientes que confían en nosotros:
         </Typography>
         <Grid container spacing={3} justifyContent="center">
           <Grid item>
             <ReusableCard
-              title="Tarjetas de Presentación"
-              description="Impresión full color en cartulina premium con acabados profesionales."
+              title="Tiendas"
+              description="Tiendas de cualquier tipo."
               image="https://i.pinimg.com/736x/61/9e/bf/619ebf49976a0f128956a0f0d86af516.jpg"
+              tag="Digital"
+            />
+          </Grid>
+          <Grid item>
+            <ReusableCard
+              title="Empresas"
+              description="Instituciones Estatales, MYPIMES, Negocios Particulares."
+              image="https://i.pinimg.com/736x/68/03/3b/68033b30a991f8f55bd16844aa841405.jpg"
+              tag="Digital"
+            />
+          </Grid>
+          <Grid item>
+            <ReusableCard
+              title="Restaurantes"
+              description="Impresión full color en cartulina premium con acabados profesionales."
+              image="https://i.pinimg.com/736x/06/8d/c5/068dc52b100ec940bd407deea560481f.jpg"
+              tag="Digital"
+            />
+          </Grid>
+          <Grid item>
+            <ReusableCard
+              title="Eventos"
+              description="Impresión full color en cartulina premium con acabados profesionales."
+              image="https://i.pinimg.com/736x/74/e6/a9/74e6a93a7d2bd32b5c611131e51f1fd7.jpg"
               tag="Digital"
             />
           </Grid>

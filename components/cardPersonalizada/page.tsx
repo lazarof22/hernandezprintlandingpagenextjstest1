@@ -17,7 +17,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShareIcon from "@mui/icons-material/Share";
 
 const ModernCard = styled(Card)(({ theme }) => ({
-  maxWidth: 345,
+  width: 250,
   borderRadius: 16,
   boxShadow: theme.shadows[6],
   transition: "transform 0.3s, box-shadow 0.3s",
@@ -63,7 +63,7 @@ export default function ReusableCard({
         <Box sx={{ position: "relative" }}>
           <CardMedia
             component="img"
-            height="220"
+            height="200"
             image={image}
             alt={title}
           />
