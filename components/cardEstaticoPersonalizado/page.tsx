@@ -112,30 +112,6 @@ export default function ReusableCard({
           )}
         </CardContent>
       </CardActionArea>
-
-      <CardActions sx={{ px: 2, py: 1, justifyContent: "space-between" }}>
-        <Box>
-          <IconButton size="small">
-            <FavoriteBorderIcon fontSize="small" />
-          </IconButton>
-          <IconButton size="small">
-            <ShareIcon fontSize="small" />
-          </IconButton>
-        </Box>
-
-        <Button
-          size="small"
-          variant="contained"
-          sx={{
-            borderRadius: 2,
-            textTransform: "none",
-            fontWeight: 600,
-          }}
-          onClick={onButtonClick}
-        >
-          {buttonText}
-        </Button>
-      </CardActions>
     </ModernCard>
   );
 }

@@ -16,8 +16,9 @@ import {
 import StyleIcon from '@mui/icons-material/Style';
 import PrintIcon from '@mui/icons-material/Print';
 import CallIcon from '@mui/icons-material/Call';
-import ReusableCard from "@/components/cardPersonalizada/page";
+import ReusableCard from "@/components/cardEstaticoPersonalizado/page";
 import Image from 'next/image'
+import ReusableCardDinamic from "@/components/cardDinamicoPersonalizado/page";
 
 export default function LandingPage() {
   return (
@@ -140,7 +141,7 @@ export default function LandingPage() {
           alignItems: "center",
           background: "linear-gradient(120deg, #7f00ff, #e100ff, #ffb347)",
           color: "white",
-          boxShadow:6
+          boxShadow: 6
         }}
       >
         <Container>
@@ -211,7 +212,7 @@ export default function LandingPage() {
           <Grid item>
             <ReusableCard
               title="Tiendas"
-              description="Tiendas de cualquier tipo."
+              description="Tiendas comercializadoras de cualquier tipo de producto tanto comida, electrodomésticos, ropa, piezas de arte, y otros."
               image="https://i.pinimg.com/736x/61/9e/bf/619ebf49976a0f128956a0f0d86af516.jpg"
               tag="Digital"
             />
@@ -219,7 +220,7 @@ export default function LandingPage() {
           <Grid item>
             <ReusableCard
               title="Empresas"
-              description="Instituciones Estatales, MYPIMES, Negocios Particulares."
+              description="Instituciones Estatales, MYPIMES, Negocios Particulares de Ventas Mayoristas y Minoristas."
               image="https://i.pinimg.com/736x/68/03/3b/68033b30a991f8f55bd16844aa841405.jpg"
               tag="Digital"
             />
@@ -227,7 +228,7 @@ export default function LandingPage() {
           <Grid item>
             <ReusableCard
               title="Restaurantes"
-              description="Impresión full color en cartulina premium con acabados profesionales."
+              description="Restaurantes,Cafés,Cafeterías Medianas,Cafeterías Pequeñas,Puestos Pequeños de Comida, y otros."
               image="https://i.pinimg.com/736x/06/8d/c5/068dc52b100ec940bd407deea560481f.jpg"
               tag="Digital"
             />
@@ -235,7 +236,7 @@ export default function LandingPage() {
           <Grid item>
             <ReusableCard
               title="Eventos"
-              description="Impresión full color en cartulina premium con acabados profesionales."
+              description="Eventos de Ocio y Entretenimiento, Eventos Deportivos, Eventos Corporativos y Empresariales, Eventos Sociales."
               image="https://i.pinimg.com/736x/74/e6/a9/74e6a93a7d2bd32b5c611131e51f1fd7.jpg"
               tag="Digital"
             />
@@ -245,30 +246,110 @@ export default function LandingPage() {
 
       {/* SERVICIOS */}
       <Container sx={{ py: 8 }}>
+        <Typography
+          variant="h4"
+          sx={{
+            fontFamily: '"Montserrat", sans-serif',
+            fontWeight: 700,
+            background: "linear-gradient(90deg, #ff8a00, #e52e71)",
+            WebkitBackgroundClip: "text",
+            backgroundClip: "text",
+            color: "transparent",
+            textShadow: "0 2px 4px rgba(0,0,0,0.1)",
+            letterSpacing: "0.05em",
+            padding: "0.2em 0.5em",
+            borderRadius: "4px",
+            textAlign: 'center', // Añadir esta línea
+            width: '100%', // Asegurar que ocupe todo el ancho
+            display: 'block', // Cambiar a block
+            mx: 'auto', // Margen horizontal automático
+            mb: 3, // Margen inferior para separar de las cards
+            '&:hover': {
+              transform: "scale(1.02)",
+              transition: "all 0.3s ease"
+            }
+          }}>
+          Nuestro Cátalogo de Servicios y Ofertas:
+        </Typography>
         <Grid container spacing={4}>
           <Grid item xs={12} md={4}>
-            <Typography variant="overline">Nuestros servicios</Typography>
             <Typography variant="h4" fontWeight={700}>
               Imprime mejor. Vende más.
             </Typography>
           </Grid>
-          <Grid item xs={12} md={8}>
-            <Grid container spacing={3}>
-              {["Tarjetas y flyers", "Lonas y vinilos", "Personalizados"].map((s) => (
-                <Grid item xs={12} md={4} key={s}>
-                  <Card sx={{ height: "100%", borderRadius: 4 }}>
-                    <CardContent>
-                      <Typography variant="h6" fontWeight={600} gutterBottom>
-                        {s}
-                      </Typography>
-                      <Typography color="text.secondary">
-                        Alta calidad, colores vivos y entrega rápida.
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
+        </Grid>
+        <Grid container spacing={3}>
+          <Grid item>
+            <ReusableCardDinamic
+              title=""
+              description="Eventos de Ocio y Entretenimiento, Eventos Deportivos, Eventos Corporativos y Empresariales, Eventos Sociales."
+              image="https://i.pinimg.com/736x/74/e6/a9/74e6a93a7d2bd32b5c611131e51f1fd7.jpg"
+              tag="Digital"
+              price=""
+            />
+          </Grid>
+          <Grid item>
+            <ReusableCardDinamic
+              title=""
+              description="Eventos de Ocio y Entretenimiento, Eventos Deportivos, Eventos Corporativos y Empresariales, Eventos Sociales."
+              image="https://i.pinimg.com/736x/74/e6/a9/74e6a93a7d2bd32b5c611131e51f1fd7.jpg"
+              tag="Digital"
+              price=""
+            />
+          </Grid>
+          <Grid item>
+            <ReusableCardDinamic
+              title=""
+              description="Eventos de Ocio y Entretenimiento, Eventos Deportivos, Eventos Corporativos y Empresariales, Eventos Sociales."
+              image="https://i.pinimg.com/736x/74/e6/a9/74e6a93a7d2bd32b5c611131e51f1fd7.jpg"
+              tag="Digital"
+              price=""
+            />
+          </Grid>
+          <Grid item>
+            <ReusableCardDinamic
+              title=""
+              description="Eventos de Ocio y Entretenimiento, Eventos Deportivos, Eventos Corporativos y Empresariales, Eventos Sociales."
+              image="https://i.pinimg.com/736x/74/e6/a9/74e6a93a7d2bd32b5c611131e51f1fd7.jpg"
+              tag="Digital"
+              price=""
+            />
+          </Grid>
+          <Grid item>
+            <ReusableCardDinamic
+              title=""
+              description="Eventos de Ocio y Entretenimiento, Eventos Deportivos, Eventos Corporativos y Empresariales, Eventos Sociales."
+              image="https://i.pinimg.com/736x/74/e6/a9/74e6a93a7d2bd32b5c611131e51f1fd7.jpg"
+              tag="Digital"
+              price=""
+            />
+          </Grid>
+          <Grid item>
+            <ReusableCardDinamic
+              title=""
+              description="Eventos de Ocio y Entretenimiento, Eventos Deportivos, Eventos Corporativos y Empresariales, Eventos Sociales."
+              image="https://i.pinimg.com/736x/74/e6/a9/74e6a93a7d2bd32b5c611131e51f1fd7.jpg"
+              tag="Digital"
+              price=""
+            />
+          </Grid>
+          <Grid item>
+            <ReusableCardDinamic
+              title=""
+              description="Eventos de Ocio y Entretenimiento, Eventos Deportivos, Eventos Corporativos y Empresariales, Eventos Sociales."
+              image="https://i.pinimg.com/736x/74/e6/a9/74e6a93a7d2bd32b5c611131e51f1fd7.jpg"
+              tag="Digital"
+              price=""
+            />
+          </Grid>
+          <Grid item>
+            <ReusableCardDinamic
+              title=""
+              description="Eventos de Ocio y Entretenimiento, Eventos Deportivos, Eventos Corporativos y Empresariales, Eventos Sociales."
+              image="https://i.pinimg.com/736x/74/e6/a9/74e6a93a7d2bd32b5c611131e51f1fd7.jpg"
+              tag="Digital"
+              price=""
+            />
           </Grid>
         </Grid>
       </Container>
