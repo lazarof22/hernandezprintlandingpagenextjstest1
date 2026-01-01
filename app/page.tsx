@@ -17,7 +17,6 @@ import StyleIcon from '@mui/icons-material/Style';
 import PrintIcon from '@mui/icons-material/Print';
 import CallIcon from '@mui/icons-material/Call';
 import ReusableCard from "@/components/cardEstaticoPersonalizado/page";
-import Image from 'next/image'
 import ReusableCardDinamic from "@/components/cardDinamicoPersonalizado/page";
 
 export default function LandingPage() {
@@ -135,50 +134,47 @@ export default function LandingPage() {
 
       {/* HERO */}
       <Box
+        minHeight="80vh"
+        width={"100%"}
+        height={"250vh"}
+        color={"white"}
         sx={{
-          minHeight: "80vh",
-          display: "flex",
-          alignItems: "center",
-          background: "linear-gradient(120deg, #7f00ff, #e100ff, #ffb347)",
-          color: "white",
-          boxShadow: 6
+          backgroundImage: `linear-gradient(to right,rgba(127,0,255,0.15),rgba(0,0,0,0)),url("/images/profile-hero.png")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          position: "relative",
         }}
       >
-        <Container>
-          <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={6}>
-              <Typography variant="overline">Sin estrés. Solo calidad.</Typography>
-              <Typography variant="h2" fontWeight={800} gutterBottom>
-                Impresiones que hacen destacar tu marca
-              </Typography>
-              <Typography variant="h6" sx={{ opacity: 0.9, mb: 4 }}>
-                Impresión digital, gran formato y personalizados con acabados profesionales.
-              </Typography>
-              <Button
-                variant="contained"
-                size="large"
-                sx={{
-                  bgcolor: "white",
-                  color: "black",
-                  borderRadius: 5,
-                  px: 4,
-                  fontWeight: 600,
-                }}
-              >
-                Solicitar cotización
-              </Button>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Box
-                sx={{
-                  height: 360,
-                  borderRadius: 4,
-                  backgroundColor: "rgba(255,255,255,0.15)",
-                }}
-              />
-            </Grid>
-          </Grid>
-        </Container>
+        <Box display={"flex"}padding={2} justifySelf={"center"}>
+          <PrintIcon sx={{ fontSize: 50 }} />
+          <Typography width={"100%"} variant="h3" fontWeight={800} gutterBottom>
+            Impresiones que hacen destacar tu marca
+          </Typography>
+          <PrintIcon sx={{ fontSize: 50 }} />
+        </Box>
+        <Typography variant="overline" sx={{ opacity: 0.85 }}>
+          Sin estrés. Solo calidad.
+        </Typography>
+
+
+
+        <Typography variant="h6" sx={{ opacity: 0.9, mb: 4 }}>
+          Impresión digital, gran formato y personalizados con acabados profesionales.
+        </Typography>
+
+        <Button
+          variant="outlined"
+          size="medium"
+          sx={{
+            color: "white",
+            borderRadius: 7,
+            borderBlockWidth: 2,
+            borderColor: "white",
+            px: 4,
+          }}
+        >
+          Solicitar cotización
+        </Button>
       </Box>
 
       {/* CLIENTES */}
@@ -245,7 +241,7 @@ export default function LandingPage() {
       </Container>
 
       {/* SERVICIOS */}
-      <Container sx={{ py: 8 }}>
+      <Container sx={{ py: 6, ml: 'center' }}>
         <Typography
           variant="h4"
           sx={{
