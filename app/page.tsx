@@ -2,183 +2,25 @@
 
 import * as React from "react";
 import {
-  AppBar,
-  Toolbar,
   Typography,
   Button,
   Box,
   Container,
   Grid,
-  Card,
-  CardContent,
   Stack,
 } from "@mui/material";
-import StyleIcon from '@mui/icons-material/Style';
 import PrintIcon from '@mui/icons-material/Print';
-import CallIcon from '@mui/icons-material/Call';
-import ReusableCard from "@/components/cardEstaticoPersonalizado/page";
-import ReusableCardDinamic from "@/components/cardDinamicoPersonalizado/page";
+import ReusableCard from "@/components/CardEstatico";
+import ReusableCardDinamic from "@/components/CardDinamico";
+import AppBarMain from "@/components/AppBarMain";
+import HeroBanner from "@/components/HeroBanner";
 
 export default function LandingPage() {
   return (
     <Box>
-      {/* HEADER */}
-      <AppBar position="static" elevation={0} sx={{ bgcolor: "transparent", color: "black" }}>
-        <Toolbar>
-          <Typography
-            variant="h4"
-            sx={{
-              fontFamily: '"Montserrat", sans-serif',
-              fontWeight: 700,
-              background: "linear-gradient(90deg, #ff8a00, #e52e71)",
-              WebkitBackgroundClip: "text",
-              backgroundClip: "text",
-              color: "transparent",
-              textShadow: "0 2px 4px rgba(0,0,0,0.1)",
-              letterSpacing: "0.05em",
-              display: "inline-block",
-              padding: "0.2em 0.5em",
-              borderRadius: "4px",
-              '&:hover': {
-                transform: "scale(1.02)",
-                transition: "all 0.3s ease"
-              }
-            }}>
-            HernandezPrint
-          </Typography>
-          <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', marginLeft: 'auto' }}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <defs>
-                <linearGradient id="buttonGradient" x1="0" y1="0" x2="24" y2="0" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#ff8a00" />
-                  <stop offset="1" stopColor="#e52e71" />
-                </linearGradient>
-              </defs>
-            </svg>
-            <Button variant="outlined"
-              startIcon={<PrintIcon />}
-              sx={{
-                fontWeight: 600,
-                fontSize: '1rem',
-                background: 'grey.900',
-                borderStyle: "hidden",
-                textTransform: 'none',
-                backgroundImage: 'linear-gradient(90deg, #ff8a00, #e52e71)',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                color: 'transparent',
-                boxShadow: 4,
-                '&:hover': {
-                  background: 'grey.900',
-                  boxShadow: '0 0 16px 0px #e52e71, 0 0 32px 0px #ff8a00, 0 0 0 8px transparent, 0 0 0 0px transparent',
-                },
-                '& .MuiSvgIcon-root': { // Aplicar gradiente también al icono
-                  fill: 'url(#buttonGradient)'
-                }
-              }}
-            >
-              Servicios
-            </Button>
-            <Button variant="outlined"
-              startIcon={<StyleIcon />}
-              sx={{
-                fontWeight: 600,
-                fontSize: '1rem',
-                background: 'grey.900',
-                borderStyle: "hidden",
-                textTransform: 'none',
-                backgroundImage: 'linear-gradient(90deg, #ff8a00, #e52e71)',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                color: 'transparent',
-                boxShadow: 4,
-                '&:hover': {
-                  background: 'grey.900',
-                  boxShadow: '0 0 16px 0px #e52e71, 0 0 32px 0px #ff8a00, 0 0 0 8px transparent, 0 0 0 0px transparent',
-                },
-                '& .MuiSvgIcon-root': { // Aplicar gradiente también al icono
-                  fill: 'url(#buttonGradient)'
-                }
-              }}
-            >
-              Portafolio
-            </Button>
-            <Button variant="outlined"
-              startIcon={<CallIcon />}
-              sx={{
-                fontWeight: 600,
-                fontSize: '1rem',
-                background: 'grey.900',
-                borderStyle: "hidden",
-                textTransform: 'none',
-                backgroundImage: 'linear-gradient(90deg, #ff8a00, #e52e71)',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                color: 'transparent',
-                boxShadow: 4,
-                '&:hover': {
-                  background: 'grey.900',
-                  boxShadow: '0 0 16px 0px #e52e71, 0 0 32px 0px #ff8a00, 0 0 0 8px transparent, 0 0 0 0px transparent',
-                },
-                '& .MuiSvgIcon-root': { // Aplicar gradiente también al icono
-                  fill: 'url(#buttonGradient)'
-                }
-              }}
-            >
-              Contacto
-            </Button>
-          </Box>
-
-        </Toolbar>
-      </AppBar>
-
-      {/* HERO */}
-      <Box
-        minHeight="80vh"
-        width={"100%"}
-        height={"250vh"}
-        color={"white"}
-        sx={{
-          backgroundImage: `linear-gradient(to right,rgba(127,0,255,0.15),rgba(0,0,0,0)),url("/images/profile-hero.png")`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          position: "relative",
-        }}
-      >
-        <Box display={"flex"}padding={2} justifySelf={"center"}>
-          <PrintIcon sx={{ fontSize: 50 }} />
-          <Typography width={"100%"} variant="h3" fontWeight={800} gutterBottom>
-            Impresiones que hacen destacar tu marca
-          </Typography>
-          <PrintIcon sx={{ fontSize: 50 }} />
-        </Box>
-        <Typography variant="overline" sx={{ opacity: 0.85 }}>
-          Sin estrés. Solo calidad.
-        </Typography>
-
-
-
-        <Typography variant="h6" sx={{ opacity: 0.9, mb: 4 }}>
-          Impresión digital, gran formato y personalizados con acabados profesionales.
-        </Typography>
-
-        <Button
-          variant="outlined"
-          size="medium"
-          sx={{
-            color: "white",
-            borderRadius: 7,
-            borderBlockWidth: 2,
-            borderColor: "white",
-            px: 4,
-          }}
-        >
-          Solicitar cotización
-        </Button>
-      </Box>
-
-      {/* CLIENTES */}
-      <Container sx={{ py: 6 }}>
+      <AppBarMain/>
+      <HeroBanner/>
+      <Container sx={{ py: 6, ml: 'center' }}>
         <Typography
           variant="h4"
           sx={{
@@ -267,14 +109,7 @@ export default function LandingPage() {
           }}>
           Nuestro Cátalogo de Servicios y Ofertas:
         </Typography>
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={4}>
-            <Typography variant="h4" fontWeight={700}>
-              Imprime mejor. Vende más.
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid container spacing={3}>
+        <Grid container spacing={3} justifyContent="center">
           <Grid item>
             <ReusableCardDinamic
               title=""
