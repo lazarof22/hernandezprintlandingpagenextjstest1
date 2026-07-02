@@ -126,7 +126,7 @@ export default function HeroBanner() {
                             lineHeight: 1.7,
                         }}
                     >
-                        Impresión digital, gran formato, escaneo, plastificado y personalizados con acabados profesionales. Sin estrés. Solo calidad.
+                        Impresión digital, gran formato, escaneo, plastificado y personalizados con acabados profesionales. Solo calidad.
                     </Typography>
 
                     {/* Lista de features */}
